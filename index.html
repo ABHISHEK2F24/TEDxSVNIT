@@ -15,17 +15,17 @@
 	<meta name="keywords" content="Ted, TEDx, TEDxSVNIT, Ideas">
 	<meta name="author" content="TEDxSVNIT">
 
-<meta property="og:type"               content="EVENT" />
-<meta property="og:title"              content="TEDxSVNIT | Ideas Worth Spreading" />
-<meta property="og:description"        content="An independently organised TEDx event operated under license from TED" />
-<meta property="og:image"              content="assets/img/backgrounds/bg1.jpg" />
+	<meta property="og:type"               content="EVENT" />
+	<meta property="og:title"              content="TEDxSVNIT | Ideas Worth Spreading" />
+	<meta property="og:description"        content="An independently organised TEDx event operated under license from TED" />
+	<meta property="og:image"              content="assets/img/backgrounds/bg1.jpg" />
 	<meta name="twitter:image" content="assets/img/backgrounds/bg1.jpg" />
 
 	<link rel="shortcut icon" href="assets/img/favicon.ico">
 	<link rel="apple-touch-icon" href="assets/img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
@@ -33,10 +33,74 @@
 		<script src="assets/js/html5shiv.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
+
+	<style>
+	h1{
+		color: #e62b1e;
+		font-weight: 100;
+		font-size: 40px;
+		margin: 40px 0px 20px;
+	}
+
+	#clockdiv{
+		font-family: sans-serif;
+		color: #000;
+		display: inline-block;
+		font-weight: 100;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	#clockdiv > div{
+		padding: 10px;
+		border-radius: 3px;
+		/* background: #fff; */
+		display: inline-block;
+	}
+
+	#clockdiv div > span{
+		padding: 15px;
+		border-radius: 3px;
+		/* background: #e62b1e; */
+		display: inline-block;
+		border: 2px solid #e62b1e;
+	}
+
+	.smalltext{
+		padding-top: 3px;
+		font-size: 16px;
+	}
+</style>
+
+
+<script>
+	var countDownDate = new Date("Sep 2, 2018 09:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo_days").innerHTML = days;
+    document.getElementById("demo_hours").innerHTML = hours;
+    document.getElementById("demo_minutes").innerHTML = minutes;
+}, 1000);
+</script>
 </head>
 
 <body>
-    <section id="hero" class="hero-section bg1 bg-cover window-height light-text"> <ul class="socials-nav"> </ul> <div class="heading-block centered-block align-center"> </div> </section>
+	<section id="hero" class="hero-section bg1 bg-cover window-height light-text"> <ul class="socials-nav"> </ul> <div class="heading-block centered-block align-center"> </div> </section>
 
 	<header class="header header-black">
 		<div class="header-wrapper">
@@ -62,19 +126,54 @@
 							<li class="navigation-item"><a href="team.html" class="navigation-link">Team</a></li>
 							<li class="navigation-item"><a href="https://tedxsvnit.wordpress.com" target="_blank" class="navigation-link">Blog</a></li>
 							
-								
+
 						</ul>
- <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScSo2SGkhbNdnJJb_9yhbdabpoP8s3lNBDKdQLiEYD2dMfWPQ/viewform?fbzx=957965098241091300" target="_blank" class="pull-right buy-btn">Register Here</a> -->
- 
+						<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScSo2SGkhbNdnJJb_9yhbdabpoP8s3lNBDKdQLiEYD2dMfWPQ/viewform?fbzx=957965098241091300" target="_blank" class="pull-right buy-btn">Register Here</a> -->
+
 					</div>
 				</div>
 			</div>
 		</div>
-</header>
+	</header>
+
+	<section id="involve" class="section align-center">
+				<div class="container" >
+					<!-- <span class="icon section-icon icon-user-04"></span> -->
+					<!-- <h3>Register</h3> -->
+
+						<!-- <div class="col-sm-12">
+							<div class="package-column special-column"> -->
+							<!-- <p id="demo2">Time to Go!!</p><br><br>
+							<p id="demo"></p><br> -->
+
+							<h1>Time to Go!</h1>
+<div id="clockdiv">
+  <div>
+    <span class="days" id="demo_days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours" id="demo_hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes" id="demo_minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+</div>
+
+
+								<h2 class="package-title" style="font-family: "Roboto", Arial, sans-serif;">Registrations are open now!</h2><br>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLScSo2SGkhbNdnJJb_9yhbdabpoP8s3lNBDKdQLiEYD2dMfWPQ/viewform" target="_blank" class="btn btn-lg btn-outline-clr">Register Here</a>
+							</div>
+						<!-- </div>
+					</div> -->
+				</div>
+			</section>
 
 	<section id="about" class="section align-center">
 		<div class="container">
-            
+
 			<h3>About Us</h3>
 			<!-- <p class="text-alt">Starting your own IT business and picking right niche in less then <span class="highlight">30 days</span></p>
 			<br />
@@ -91,7 +190,7 @@
 					<li><a href="#horizontal_tab3" data-toggle="tab">
 						<h6 class="heading-alt"><span class="fa fa-rocket"></span> TEDxSVNIT</h6>
 					</a></li>
-						<li><a href="#horizontal_tab4" data-toggle="tab">
+					<li><a href="#horizontal_tab4" data-toggle="tab">
 						<h6 class="heading-alt"><span class="fa fa-rocket"></span> Theme</h6>
 					</a></li>
 				</ul>
@@ -129,9 +228,9 @@
 						<div class="col-sm-7 align-left">
 							<h6>TEDxSVNIT</h6>
 							<p>TEDxSVNIT is an independently organised TEDx event operated under license from TED. Innovation takes place when diverse ideas reach out to the inquisitive minds of people. At TEDxSVNIT, we present an opportunity to bring up out of the box thinkers and let their ideas, innovations and inventions kindle a think tank among the student. With an event such as this, we aim to create a turbulence in the mainstream engineering mindset of students so that newer ideas incubate with a blend of art and technology.</p>
-                            <p>TEDxSVNIT shares the same passion as TED. We are here to spread your ideas all across the globe. Our objective is to reach out and inspire people with “Ideas Worth Sharing” which has the potential to help people make a strong difference in their lives.</p>
-<p>
-TEDxSVNIT is oriented at developing a community of like minded highly informed and engaged innovators, designers, thinkers, technologists and environmentally and socially concerned individuals in an institute of national importance - SVNIT.</p>
+							<p>TEDxSVNIT shares the same passion as TED. We are here to spread your ideas all across the globe. Our objective is to reach out and inspire people with “Ideas Worth Sharing” which has the potential to help people make a strong difference in their lives.</p>
+							<p>
+							TEDxSVNIT is oriented at developing a community of like minded highly informed and engaged innovators, designers, thinkers, technologists and environmentally and socially concerned individuals in an institute of national importance - SVNIT.</p>
 						</div>
 					</div>
 					
@@ -145,189 +244,175 @@ TEDxSVNIT is oriented at developing a community of like minded highly informed a
 						<div class="col-sm-5 img-column">
 							<img src="assets/img/bulb1.png" alt="" class="img-responsive" />
 						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	
-			<section id="involve" class="section align-center">
-				<div class="container" style="font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;">
-					<!-- <span class="icon section-icon icon-user-04"></span> -->
-					<!-- <h3>Register</h3> -->
+		</section>
 
-						<!-- <div class="col-sm-12">
-							<div class="package-column special-column"> -->
+		
 
-								<h2 class="package-title">Registrations are open now!</h2><br>
-								<a href="https://docs.google.com/forms/d/e/1FAIpQLScSo2SGkhbNdnJJb_9yhbdabpoP8s3lNBDKdQLiEYD2dMfWPQ/viewform" target="_blank" class="btn btn-lg btn-outline-clr">Register Here</a>
+				<section class="section">
+					<div class="container">
+						<h3 class="heading-alt">FAQ's</h3>
+						<div class="col-sm-6">
+							<div class="panel-group panel-group-alt" id="accordion">
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel1" aria-expanded="false"><span class="fa fa-plus"></span> Who can participate?</a>
+									<div id="panel1" class="panel-collapse collapse ">
+										<div class="panel-body">
+
+											<p>Anyone who wants to get influenced and make a positive change in their life and the lives of others is most welcome.
+
+
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel2" aria-expanded="false"><span class="fa fa-plus"></span> Can I attend event without registration?</a>
+									<div id="panel2" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>No, you must fill the registration form if you want to attend the event.</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<a class="collapsed marquee" data-toggle="collapse" data-parent="#accordion" href="#panel3" aria-expanded="false"><span class="fa fa-plus"></span> Why do I need to register?</a>
+									<div id="panel3" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>TEDxSVNIT is a niche event only meant for the most dedicated and ambitious people of this generation and therefore there is a cap on the number of people being invited to our event.
+
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel4" aria-expanded="false"><span class="fa fa-plus"></span> How does the application process work?</a>
+									<div id="panel4" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<p>First, you must submit the registration form. We have an evaluation panel which consists of our team members as well outside people who will assess you based on your answers. Once the evaluation is completed and you meet their expectations, we will inform you via email for the next process.
+
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel5" aria-expanded="false"><span class="fa fa-plus"></span> When is the registration deadline?</a>
+									<div id="panel5" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<p>Don't worry! You will get sufficient amount of time for completing your registration. Just stay tuned with our social media platforms for the exact details of the registration deadline.
+
+
+											</p>
+										</div>
+									</div>
+								</div>
+
 							</div>
-						<!-- </div>
-					</div> -->
+						</div>
+
+						<div class="col-sm-6">
+							<div class="panel-group panel-group-alt" id="accordion2">
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel1" aria-expanded="false"><span class="fa fa-plus"></span> What after submitting registration form?</a>
+									<div id="acc2-panel1" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>All you have to do is wait for a confirmation email that we will send to your registered email after your registration form has been evaluated. Patience is the key!
+
+
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel3" aria-expanded="false"><span class="fa fa-plus"></span> What is the registration fee?</a>
+									<div id="acc2-panel3" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>The registration fee for attending the event is Rs. 1000. You will be asked to pay the amount only after you are successfully registered for the event.
+
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel4" aria-expanded="false"><span class="fa fa-plus"></span> How do I pay the registration fee?
+									</a>
+									<div id="acc2-panel4" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<p>Various payment gateways will be made available to all the successful registrants.</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel5" aria-expanded="false"><span class="fa fa-plus"></span>  What am I expected to bring?</a>
+									<div id="acc2-panel5" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<p>Just bring your heart and curiosity to the event. Oh and don't forget to carry your confirmation ticket! Rest of the things like Registration Kit, note taking material, cool schwags, lunch selfie booths (to show off) etc. will be taken care by us.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel6" aria-expanded="false"><span class="fa fa-plus"></span> Did we miss something?</a>
+									<div id="acc2-panel6" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>Please email us at <a href="mailto:contact@tedxsvnit.com">contact@tedxsvnit.com</a>. Also don't forget to follow our social media platforms for the latest updates.
+
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+				</section>
+
+
+
+				<section class="footer" id="contact">
+
+					<div class="container">
+
+
+						<div class="col-md-6">
+							<ul class="footer-nav align-center">
+								<li class="footer-nav-item" style="text-align: center"><a href="mailto:contact@tedxsvnit.com" target="_top">contact@tedxsvnit.com</a></li><br>
+								<ul class="align-center">
+									<li class="socials-nav-item"><a href="https://www.twitter.com/tedxsvnit" target="_blank"><span class="fa fa-twitter"></span></a></li>
+									<li class="socials-nav-item"><a href="https://www.facebook.com/tedxsvnit/" target="_blank"><span class="fa fa-facebook"></span></a></li>
+									<li class="socials-nav-item"><a href="https://www.instagram.com/tedxsvnit/" target="_blank"><span class="fa fa-instagram"></span></a></li>
+									<li class="socials-nav-item"><a href="https://www.quora.com/profile/TEDx-SVNIT" target="blank"><span class="fa fa-quora"></span></a></li>
+								</ul>
+
+
+							</ul>
+						</div>
+
+						<div class="col-md-6 align-center">
+
+							<p class="text-alt"><small>All Rights Reserved © 2018</small></p>
+						</div>
+
+					</div>
 				</div>
 			</section>
-   
-		<section class="section">
-		<div class="container">
-                              <h3 class="heading-alt">FAQ's</h3>
-			<div class="col-sm-6">
-				<div class="panel-group panel-group-alt" id="accordion">
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel1" aria-expanded="false"><span class="fa fa-plus"></span> Who can participate?</a>
-						<div id="panel1" class="panel-collapse collapse ">
-							<div class="panel-body">
-								
-								<p>Anyone who wants to get influenced and make a positive change in their life and the lives of others is most welcome.
-
-
-</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel2" aria-expanded="false"><span class="fa fa-plus"></span> Can I attend event without registration?</a>
-						<div id="panel2" class="panel-collapse collapse">
-							<div class="panel-body">
-								<p>No, you must fill the registration form if you want to attend the event.</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<a class="collapsed marquee" data-toggle="collapse" data-parent="#accordion" href="#panel3" aria-expanded="false"><span class="fa fa-plus"></span> Why do I need to register?</a>
-						<div id="panel3" class="panel-collapse collapse">
-							<div class="panel-body">
-								<p>TEDxSVNIT is a niche event only meant for the most dedicated and ambitious people of this generation and therefore there is a cap on the number of people being invited to our event.
-
-</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel4" aria-expanded="false"><span class="fa fa-plus"></span> How does the application process work?</a>
-						<div id="panel4" class="panel-collapse collapse">
-							<div class="panel-body">
-								
-								<p>First, you must submit the registration form. We have an evaluation panel which consists of our team members as well outside people who will assess you based on your answers. Once the evaluation is completed and you meet their expectations, we will inform you via email for the next process.
-
-</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel5" aria-expanded="false"><span class="fa fa-plus"></span> When is the registration deadline?</a>
-						<div id="panel5" class="panel-collapse collapse">
-							<div class="panel-body">
-								
-								<p>Don't worry! You will get sufficient amount of time for completing your registration. Just stay tuned with our social media platforms for the exact details of the registration deadline.
-
-
-</p>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-
-			<div class="col-sm-6">
-				<div class="panel-group panel-group-alt" id="accordion2">
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel1" aria-expanded="false"><span class="fa fa-plus"></span> What after submitting registration form?</a>
-						<div id="acc2-panel1" class="panel-collapse collapse">
-							<div class="panel-body">
-								<p>All you have to do is wait for a confirmation email that we will send to your registered email after your registration form has been evaluated. Patience is the key!
-
-
-</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel3" aria-expanded="false"><span class="fa fa-plus"></span> What is the registration fee?</a>
-						<div id="acc2-panel3" class="panel-collapse collapse">
-							<div class="panel-body">
-								<p>The registration fee for attending the event is Rs. 1000. You will be asked to pay the amount only after you are successfully registered for the event.
-
-</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel4" aria-expanded="false"><span class="fa fa-plus"></span> How do I pay the registration fee?
-</a>
-						<div id="acc2-panel4" class="panel-collapse collapse">
-							<div class="panel-body">
-								
-								<p>Various payment gateways will be made available to all the successful registrants.</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel5" aria-expanded="false"><span class="fa fa-plus"></span>  What am I expected to bring?</a>
-						<div id="acc2-panel5" class="panel-collapse collapse">
-							<div class="panel-body">
-								
-								<p>Just bring your heart and curiosity to the event. Oh and don't forget to carry your confirmation ticket! Rest of the things like Registration Kit, note taking material, cool schwags, lunch selfie booths (to show off) etc. will be taken care by us.
-</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#acc2-panel6" aria-expanded="false"><span class="fa fa-plus"></span> Did we miss something?</a>
-						<div id="acc2-panel6" class="panel-collapse collapse">
-							<div class="panel-body">
-								<p>Please email us at <a href="mailto:contact@tedxsvnit.com">contact@tedxsvnit.com</a>. Also don't forget to follow our social media platforms for the latest updates.
-
-</p>
-							</div>
-						</div>
-					</div>
-							</div>
-			</div>
-
-
-
-		</div>
-	</section>
-
-	
-
-	<section class="footer" id="contact">
-		
-			<div class="container">
-
-				
-                 	<div class="col-md-6">
-					<ul class="footer-nav align-center">
-						<li class="footer-nav-item" style="text-align: center"><a href="mailto:contact@tedxsvnit.com" target="_top">contact@tedxsvnit.com</a></li><br>
-						<ul class="align-center">
-						<li class="socials-nav-item"><a href="https://www.twitter.com/tedxsvnit" target="_blank"><span class="fa fa-twitter"></span></a></li>
-						<li class="socials-nav-item"><a href="https://www.facebook.com/tedxsvnit/" target="_blank"><span class="fa fa-facebook"></span></a></li>
-						<li class="socials-nav-item"><a href="https://www.instagram.com/tedxsvnit/" target="_blank"><span class="fa fa-instagram"></span></a></li>
-						<li class="socials-nav-item"><a href="https://www.quora.com/profile/TEDx-SVNIT" target="blank"><span class="fa fa-quora"></span></a></li>
-					</ul>
-
-						
-					</ul>
-				</div>
-                
-				<div class="col-md-6 align-center">
-					
-					<p class="text-alt"><small>All Rights Reserved © 2018</small></p>
-				</div>
-
-			</div>
-		</div>
-	</section>
 
 
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script>
 	<![endif]-->
 	<!--[if (gte IE 9) | (!IE)]><!-->
-		<script type="text/javascript" src="assets/js/jquery-2.1.4.min68b3.js?ver=1"></script>
+	<script type="text/javascript" src="assets/js/jquery-2.1.4.min68b3.js?ver=1"></script>
 	<!--<![endif]-->
 
 	<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places"></script>
@@ -348,7 +433,7 @@ TEDxSVNIT is oriented at developing a community of like minded highly informed a
 	<script type="text/javascript" src="../assets/js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery.mousewheel-3.0.6.min.js"></script>
 	<script type="text/javascript" src="../assets/js/bxslider.js"></script>
-	</body>
+</body>
 
 
 </html>
