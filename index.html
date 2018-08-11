@@ -99,22 +99,7 @@ var x = setInterval(function() {
 }, 1000);
 </script>
 	
-	<link rel="manifest" href="manifest.json" />
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "d3692640-be84-46b7-92e7-698d1258f639",
-      autoRegister: false,
-      notifyButton: {
-        enable: true,
-      },
-    });
-  });
-</script>
-</head>
-
+	
 <body>
 	<section id="hero" class="hero-section bg1 bg-cover window-height light-text"> <ul class="socials-nav"> </ul> <div class="heading-block centered-block align-center"> </div> </section>
 
@@ -428,6 +413,19 @@ var x = setInterval(function() {
 		</div>
 	</section>
 
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCpiBwJH-YMzqrdpAoZ1nO34i7w3lx1jeY",
+    authDomain: "tedxnit.firebaseapp.com",
+    databaseURL: "https://tedxnit.firebaseio.com",
+    projectId: "tedxnit",
+    storageBucket: "tedxnit.appspot.com",
+    messagingSenderId: "63825623376"
+  };
+  firebase.initializeApp(config);
+</script>
 
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script>
