@@ -98,6 +98,21 @@ var x = setInterval(function() {
     document.getElementById("demo_seconds").innerHTML = seconds;
 }, 1000);
 </script>
+	
+	<link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "d3692640-be84-46b7-92e7-698d1258f639",
+      autoRegister: false,
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
 </head>
 
 <body>
