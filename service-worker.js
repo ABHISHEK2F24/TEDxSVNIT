@@ -1,1 +1,0 @@
-importScripts('https://cdn.izooto.com/scripts/workers/77727474b2d65cc9b1b6f71f07a15a4087cf2b74.js');
