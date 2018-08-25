@@ -36,8 +36,8 @@
 }
 .timeline::before {
   position: fixed;
-  top: 0;
-  height: 100%;
+  top: 140px;
+  height: 40%;
   padding-right: 11px;
   border-right: 2px solid #F2F2F2;
   content: "";
@@ -117,7 +117,7 @@
   }
   .timeline__step__marker {
     height: 13.71429px;
-    min-hieght: 13.71429px;
+    min-height: 13.71429px;
     width: 13.71429px;
     min-width: 13.71429px;
     border-width: 2.28571px;
