@@ -15,29 +15,6 @@ var Ventcamp;
 
 })( jQuery );
 
-$(document).ready(function() { 
-  var id = '#dialog';
-  var maskHeight = $(document).height();
-  var maskWidth = $(window).width();
-  $('#mask').css({'width':maskWidth,'height':maskHeight}); 
-  $('#mask').fadeIn(500); 
-  $('#mask').fadeTo("slow",0.9); 
-        var winH = $(window).height();
-  var winW = $(window).width();
-        $(id).css('top',  winH/2-$(id).height()/2);
-  $(id).css('left', winW/2-$(id).width()/2);
-     $(id).fadeIn(2000);  
-     $('.window .close').click(function (e) {
-  e.preventDefault();
-  $('#mask').hide();
-  $('.window').hide();
-     });  
-     $('#mask').click(function () {
-  $(this).hide();
-  $('.window').hide();
- });  
- 
-});
 
 // Main theme functions start
 Ventcamp = {
@@ -1243,3 +1220,42 @@ $('.navigation-item').on( 'click', function (event) {
         $('#navigation').removeClass('in');
     }
 }); 
+
+		// Hide Header on on scroll down
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header-wrapper').outerHeight();
+		$(window).scroll(function(event){
+			didScroll = true;
+		});
+		setInterval(function() {
+			if (didScroll) {
+				hasScrolled();
+				didScroll = false;
+			}
+		}, 250);
+		function hasScrolled() {
+			// console.log('scrolled');
+			var st = $(this).scrollTop();
+			
+			// Make sure they scroll more than delta
+			if(Math.abs(lastScrollTop - st) <= delta)
+				return;
+			
+			// If they scrolled down and are past the navbar, add class .nav-up.
+			// This is necessary so you never see what is "behind" the navbar.
+			if (st > lastScrollTop && st > navbarHeight){
+				// Scroll Down
+				console.log('scroll down');
+				$('.header.fixed .header-wrapper').fadeOut(100);
+			} else {
+				// Scroll Up
+				console.log('scroll up');
+				$('.header.fixed .header-wrapper').fadeIn(100);
+				
+			}
+			var temp = st <= 0 ? 0 : st;
+			st = temp;
+			lastScrollTop = st;
+		}
