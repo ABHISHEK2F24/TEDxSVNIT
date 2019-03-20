@@ -6508,7 +6508,7 @@ button[type="submit"] .loading {
   padding: 50px 0 0;
   color: #ffffff;
 /*  background: linear-gradient(to right, #232526, #414345);*/
-	  background: linear-gradient(to right, #c31432, #240b36);
+	 background: linear-gradient(-45deg,#dc2424, #4a569d);
 }
 .footer-base {
   padding: 40px 0 30px;
